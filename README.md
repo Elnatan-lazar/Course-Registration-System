@@ -23,41 +23,41 @@ This project is a simple course registration system that uses object-oriented de
 
 ## Usage
 
-**Creating Courses**
+1. **Creating Courses**
 
-You can create different types of courses using the `CourseFactory`:
+    You can create different types of courses using the `CourseFactory`:
 
-```java
-CourseFactory factory = CourseFactory.getInstance();
-Course mandatoryCourse = factory.createOrGetCourse("mandatory", 1, "Mandatory Course");
-Course nonMandatoryCourse = factory.createOrGetCourse("nonmandatory", 2, "Non-Mandatory Course");
-Course seminarCourse = factory.createOrGetCourse("seminar", 3, "Seminar Course");
-
-
-**Adding Students**
-Students can be added to a course if there is space. If the course is full, students can register for notifications:
-
-```java
-Course course = new Course("Math", 30);
-Student student = new Student("Alice");
-try {
-    course.add(student);
-} catch (Exception e) {
-    System.out.println(e.getMessage());
-}
+    ```java
+    CourseFactory factory = CourseFactory.getInstance();
+    Course mandatoryCourse = factory.createOrGetCourse("mandatory", 1, "Mandatory Course");
+    Course nonMandatoryCourse = factory.createOrGetCourse("nonmandatory", 2, "Non-Mandatory         Course");
+    Course seminarCourse = factory.createOrGetCourse("seminar", 3, "Seminar Course");
 
 
-**Observer Pattern**
-To notify students when a course becomes available:
+2. **Adding Students**
+    Students can be added to a course if there is space. If the course is full, students can         register for notifications:
 
+    ```java
+    Course course = new Course("Math", 30);
+    Student student = new Student("Alice");
+    try {
+        course.add(student);
+    } catch (Exception e) {
+        System.out.println(e.getMessage());
+    }
+
+
+3. **Observer Pattern**
+    To notify students when a course becomes available:
+    
     1.Create a StudentObserver and register it with the course.
     2.Simulate adding students and check if notifications are triggered:
-```java
-Course course = new Course("Math", 30);
-StudentObserver observer = new StudentObserver("Bob");
+    ```java
+    Course course = new Course("Math", 30);
+    StudentObserver observer = new StudentObserver("Bob");
 
-course.addObserver(observer);
-course.addStudent(); // This will notify observers if there is space available
+    course.addObserver(observer);
+    course.addStudent(); // This will notify observers if there is space available
 
 
 ## Contributions are welcome! Please fork the repository and submit a pull request with your changes.
