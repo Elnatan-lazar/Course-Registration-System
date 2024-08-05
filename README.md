@@ -27,19 +27,19 @@ This project is a simple course registration system that uses object-oriented de
 
 You can create different types of courses using the `CourseFactory`:
 
+```java
 CourseFactory factory = CourseFactory.getInstance();
 Course mandatoryCourse = factory.createOrGetCourse("mandatory", 1, "Mandatory Course");
 Course nonMandatoryCourse = factory.createOrGetCourse("nonmandatory", 2, "Non-Mandatory Course");
 Course seminarCourse = factory.createOrGetCourse("seminar", 3, "Seminar Course");
 
 
-Adding Students
+## Adding Students
 Students can be added to a course if there is space. If the course is full, students can register for notifications:
 
-
+```java
 Course course = new Course("Math", 30);
 Student student = new Student("Alice");
-
 try {
     course.add(student);
 } catch (Exception e) {
@@ -47,13 +47,12 @@ try {
 }
 
 
-Observer Pattern
+## Observer Pattern
 To notify students when a course becomes available:
 
-Create a StudentObserver and register it with the course.
-
-Simulate adding students and check if notifications are triggered:
-
+    1.Create a StudentObserver and register it with the course.
+    2.Simulate adding students and check if notifications are triggered:
+```java
 Course course = new Course("Math", 30);
 StudentObserver observer = new StudentObserver("Bob");
 
@@ -61,7 +60,7 @@ course.addObserver(observer);
 course.addStudent(); // This will notify observers if there is space available
 
 
-Contributions are welcome! Please fork the repository and submit a pull request with your changes.
+## Contributions are welcome! Please fork the repository and submit a pull request with your changes.
 
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
