@@ -23,7 +23,7 @@ This project is a simple course registration system that uses object-oriented de
 
 ## Usage
 
-### Creating Courses
+## Creating Courses
 
 You can create different types of courses using the `CourseFactory`:
 
