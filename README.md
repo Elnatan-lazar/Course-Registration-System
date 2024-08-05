@@ -23,7 +23,7 @@ This project is a simple course registration system that uses object-oriented de
 
 ## Usage
 
-## Creating Courses
+**Creating Courses**
 
 You can create different types of courses using the `CourseFactory`:
 
@@ -34,7 +34,7 @@ Course nonMandatoryCourse = factory.createOrGetCourse("nonmandatory", 2, "Non-Ma
 Course seminarCourse = factory.createOrGetCourse("seminar", 3, "Seminar Course");
 
 
-## Adding Students
+**Adding Students**
 Students can be added to a course if there is space. If the course is full, students can register for notifications:
 
 ```java
@@ -47,7 +47,7 @@ try {
 }
 
 
-## Observer Pattern
+**Observer Pattern**
 To notify students when a course becomes available:
 
     1.Create a StudentObserver and register it with the course.
