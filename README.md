@@ -59,7 +59,8 @@ StudentObserver observer = new StudentObserver("Bob");
 
 course.addObserver(observer);
 course.addStudent(); // This will notify observers if there is space available
-Contributing
+
+
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
 
 License
