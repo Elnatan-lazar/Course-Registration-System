@@ -51,9 +51,9 @@ Observer Pattern
 To notify students when a course becomes available:
 
 Create a StudentObserver and register it with the course.
+
 Simulate adding students and check if notifications are triggered:
-java
-Copy code
+
 Course course = new Course("Math", 30);
 StudentObserver observer = new StudentObserver("Bob");
 
@@ -65,7 +65,3 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-arduino
-Copy code
-
-You can copy and paste this text block directly into your README file.
